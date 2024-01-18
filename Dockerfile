@@ -10,7 +10,7 @@ RUN apt-get update \
 	texlive-fonts-extra \
 	texlive-bibtex-extra \
 	texlive-science \
-	texlive-generic-recommended \
+	texlive-plain-generic \
 	texi2html \
 	texinfo \
 	lmodern \
