@@ -12,6 +12,7 @@ RUN apt-get update \
 	texlive-science \
 	texi2html \
 	texinfo \
+	lmodern \
 	&& apt-get clean \
 	&& rm -rf /var/lib/apt/lists/*
 
@@ -20,3 +21,6 @@ RUN R -e 'BiocManager::install("BiocStyle")'
 
 ## Install spillR
 RUN R -e 'BiocManager::install("spillR")'
+
+## Install other packages
+RUN R -e 'BiocManager::install(c("cowplot", "transport", "RColorBrewer", "parallel", "kableExtra", "hexbin"))'
