@@ -17,3 +17,6 @@ RUN apt-get update \
 
 ## Install BiocStyle
 RUN R -e 'BiocManager::install("BiocStyle")'
+
+## Install spillR
+RUN R -e 'BiocManager::install("spillR")'
