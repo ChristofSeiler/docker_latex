@@ -10,6 +10,7 @@ RUN apt-get update \
 	texlive-fonts-extra \
 	texlive-bibtex-extra \
 	texlive-science \
+	texlive-generic-recommended \
 	texi2html \
 	texinfo \
 	lmodern \
@@ -23,4 +24,4 @@ RUN R -e 'BiocManager::install("BiocStyle")'
 RUN R -e 'BiocManager::install("spillR")'
 
 ## Install other packages
-RUN R -e 'BiocManager::install(c("cowplot", "transport", "RColorBrewer", "parallel", "kableExtra", "hexbin"))'
+RUN R -e 'BiocManager::install(c("cowplot", "transport", "RColorBrewer", "parallel", "kableExtra", "hexbin", "readr"))'
